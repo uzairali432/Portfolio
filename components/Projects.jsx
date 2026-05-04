@@ -66,16 +66,16 @@ const Projects = () => {
   }
 
   return (
-    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-background dark:bg-background-secondary/30">
       <div className="max-w-7xl mx-auto">
         <motion.h2
-          className="text-4xl sm:text-5xl font-bold text-center mb-16"
+          className="text-4xl sm:text-5xl font-bold text-center mb-16 text-black dark:text-white"
           ref={ref}
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
         >
-          Featured <span className="text-black font-black">Projects</span>
+          Featured <span className="text-black dark:text-white font-black">Projects</span>
         </motion.h2>
 
         <motion.div
@@ -87,12 +87,12 @@ const Projects = () => {
           {projects.map((project) => (
             <motion.div
               key={project.id}
-              className="group bg-white/2 border border-foreground/10 rounded-2xl overflow-hidden hover:border-black/20 transition-all"
+              className="group bg-white/2 dark:bg-background-secondary border border-foreground/10 dark:border-foreground/10 rounded-2xl overflow-hidden hover:border-black/20 dark:hover:border-white/20 transition-all"
               variants={cardVariants}
               whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }}
             >
               {/* Image */}
-              <div className="relative overflow-hidden h-48 sm:h-56 bg-foreground/5">
+              <div className="relative overflow-hidden h-48 sm:h-56 bg-foreground/5 dark:bg-foreground/5">
                 <motion.img
                   src={project.image}
                   alt={project.title}
@@ -104,15 +104,15 @@ const Projects = () => {
 
               {/* Content */}
               <div className="p-6 space-y-4">
-                <h3 className="text-xl font-bold text-black">{project.title}</h3>
-                <p className="text-foreground/70 leading-relaxed text-sm">{project.description}</p>
+                <h3 className="text-xl font-bold text-black dark:text-white">{project.title}</h3>
+                <p className="text-foreground/70 dark:text-foreground/70 leading-relaxed text-sm">{project.description}</p>
 
                 {/* Tech */}
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((tech) => (
                     <motion.span
                       key={tech}
-                      className="text-xs px-3 py-1.5 bg-black/5 text-black border border-black/10 rounded-full font-medium"
+                      className="text-xs px-3 py-1.5 bg-black/5 dark:bg-white/5 text-black dark:text-white border border-black/10 dark:border-white/10 rounded-full font-medium"
                       whileHover={{ scale: 1.1 }}
                     >
                       {tech}

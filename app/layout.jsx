@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google"
 import "./globals.css"
+import { ThemeProvider } from "@/components/ThemeProvider"
 
 const geistSans = Geist({
   subsets: ["latin"],
@@ -12,14 +13,14 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata = {
-  title: "Syed Uzair Ali - Front-End Developer",
+  title: "Syed Uzair Ali - MERN Stack Developer",
   description:
-    "Professional portfolio showcasing front-end development projects and skills in React, Next.js, and modern web technologies.",
-  keywords: "front-end developer, react, next.js, web development, portfolio",
+    "Professional portfolio showcasing full-stack development projects and skills in MongoDB, Express, React, and Node.js.",
+  keywords: "MERN stack developer, react, node.js, mongodb, express, full-stack, web development, portfolio",
   authors: [{ name: "Syed Uzair Ali" }],
   openGraph: {
-    title: "Syed Uzair Ali - Front-End Developer",
-    description: "Professional portfolio showcasing front-end development projects and skills.",
+    title: "Syed Uzair Ali - MERN Stack Developer",
+    description: "Professional portfolio showcasing full-stack development projects and skills.",
     type: "website",
   },
 }
@@ -32,8 +33,10 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body>{children}</body>
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`} suppressHydrationWarning>
+      <body>
+        <ThemeProvider>{children}</ThemeProvider>
+      </body>
     </html>
   )
 }

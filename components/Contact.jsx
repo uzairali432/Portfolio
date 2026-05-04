@@ -77,7 +77,7 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-white/1">
+    <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-white/1 dark:bg-background">
       <div className="max-w-4xl mx-auto">
         <motion.div
           ref={ref}
@@ -88,10 +88,10 @@ const Contact = () => {
         >
           {/* Heading */}
           <motion.div className="text-center space-y-4" variants={itemVariants}>
-            <h2 className="text-4xl sm:text-5xl font-bold text-balance">
-              Let's <span className="text-black font-black">Connect</span>
+            <h2 className="text-4xl sm:text-5xl font-bold text-balance text-black dark:text-white">
+              Let's <span className="text-black dark:text-white font-black">Connect</span>
             </h2>
-            <p className="text-foreground/70 text-lg max-w-2xl mx-auto">
+            <p className="text-foreground/70 dark:text-foreground/70 text-lg max-w-2xl mx-auto">
               I'm always interested in hearing about new projects and opportunities. Feel free to reach out!
             </p>
           </motion.div>
@@ -101,42 +101,42 @@ const Contact = () => {
             <motion.div variants={itemVariants}>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label className="block text-foreground/70 font-semibold mb-2 text-sm">Name</label>
+                  <label className="block text-foreground/70 dark:text-foreground/70 font-semibold mb-2 text-sm">Name</label>
                   <motion.input
                     type="text"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-white/2 border border-foreground/10 rounded-lg text-foreground focus:outline-none focus:border-black/30 focus:bg-white/4 transition-all"
+                    className="w-full px-4 py-3 bg-white/2 dark:bg-background-secondary border border-foreground/10 dark:border-foreground/10 rounded-lg text-foreground dark:text-foreground focus:outline-none focus:border-black/30 dark:focus:border-white/30 focus:bg-white/4 dark:focus:bg-white/5 transition-all"
                     placeholder="Your name"
                     whileFocus={{ scale: 1.01 }}
                   />
                 </div>
 
                 <div>
-                  <label className="block text-foreground/70 font-semibold mb-2 text-sm">Email</label>
+                  <label className="block text-foreground/70 dark:text-foreground/70 font-semibold mb-2 text-sm">Email</label>
                   <motion.input
                     type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-white/2 border border-foreground/10 rounded-lg text-foreground focus:outline-none focus:border-black/30 focus:bg-white/4 transition-all"
+                    className="w-full px-4 py-3 bg-white/2 dark:bg-background-secondary border border-foreground/10 dark:border-foreground/10 rounded-lg text-foreground dark:text-foreground focus:outline-none focus:border-black/30 dark:focus:border-white/30 focus:bg-white/4 dark:focus:bg-white/5 transition-all"
                     placeholder="your.email@example.com"
                     whileFocus={{ scale: 1.01 }}
                   />
                 </div>
 
                 <div>
-                  <label className="block text-foreground/70 font-semibold mb-2 text-sm">Message</label>
+                  <label className="block text-foreground/70 dark:text-foreground/70 font-semibold mb-2 text-sm">Message</label>
                   <motion.textarea
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
                     required
                     rows="5"
-                    className="w-full px-4 py-3 bg-white/2 border border-foreground/10 rounded-lg text-foreground focus:outline-none focus:border-black/30 focus:bg-white/4 transition-all resize-none"
+                    className="w-full px-4 py-3 bg-white/2 dark:bg-background-secondary border border-foreground/10 dark:border-foreground/10 rounded-lg text-foreground dark:text-foreground focus:outline-none focus:border-black/30 dark:focus:border-white/30 focus:bg-white/4 dark:focus:bg-white/5 transition-all resize-none"
                     placeholder="Your message..."
                     whileFocus={{ scale: 1.01 }}
                   />
@@ -144,7 +144,7 @@ const Contact = () => {
 
                 <motion.button
                   type="submit"
-                  className="w-full px-6 py-3 bg-black text-white font-bold rounded-lg hover:bg-black/90 transition-colors"
+                  className="w-full px-6 py-3 bg-black dark:bg-white text-white dark:text-black font-bold rounded-lg hover:bg-black/90 dark:hover:bg-white/90 transition-colors"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
@@ -161,7 +161,7 @@ const Contact = () => {
               animate={inView ? "visible" : "hidden"}
             >
               <motion.div variants={itemVariants}>
-                <p className="text-foreground/70 mb-4 font-semibold">Connect with me on social media</p>
+                <p className="text-foreground/70 dark:text-foreground/70 mb-4 font-semibold">Connect with me on social media</p>
                 <div className="space-y-3">
                   {socialLinks.map((link) => (
                     <motion.a
@@ -169,21 +169,21 @@ const Contact = () => {
                       href={link.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="block px-4 py-3 bg-white/2 border border-foreground/10 rounded-lg text-foreground hover:border-black/20 hover:bg-white/4 transition-all"
+                      className="block px-4 py-3 bg-white/2 dark:bg-background-secondary border border-foreground/10 dark:border-foreground/10 rounded-lg text-foreground dark:text-foreground hover:border-black/20 dark:hover:border-white/20 hover:bg-white/4 dark:hover:bg-white/5 transition-all"
                       whileHover={{ x: 8 }}
                     >
                       <div className="flex items-center justify-between font-semibold">
                         <span>{link.name}</span>
-                        <span className="text-black">{link.icon}</span>
+                        <span className="text-black dark:text-white">{link.icon}</span>
                       </div>
                     </motion.a>
                   ))}
                 </div>
               </motion.div>
 
-              <motion.div variants={itemVariants} className="pt-4 border-t border-foreground/10">
-                <p className="text-foreground/70 mb-2 font-semibold text-sm">Direct Email</p>
-                <p className="text-black font-bold">ghayasali2424@gmail.com</p>
+              <motion.div variants={itemVariants} className="pt-4 border-t border-foreground/10 dark:border-foreground/10">
+                <p className="text-foreground/70 dark:text-foreground/70 mb-2 font-semibold text-sm">Direct Email</p>
+                <p className="text-black dark:text-white font-bold">ghayasali2424@gmail.com</p>
               </motion.div>
             </motion.div>
           </div>
