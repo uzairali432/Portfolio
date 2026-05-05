@@ -142,14 +142,14 @@ const Skills = () => {
             <h3 className="text-lg font-bold mb-4 text-black dark:text-white">Proficiency Levels</h3>
             <ResponsiveContainer width="100%" height={300}>
               <BarChart data={skillsData}>
-                <CartesianGrid strokeDasharray="3 3" stroke="rgba(0,0,0,0.1)" />
-                <XAxis dataKey="name" stroke="rgba(255,255,255,0.6)" />
-                <YAxis stroke="rgba(255,255,255,0.6)" domain={[0, 100]} />
+                <CartesianGrid strokeDasharray="3 3" stroke={theme === "dark" ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.1)"} />
+                <XAxis dataKey="name" stroke={theme === "dark" ? "rgba(255,255,255,0.5)" : "rgba(0,0,0,0.5)"} />
+                <YAxis stroke={theme === "dark" ? "rgba(255,255,255,0.5)" : "rgba(0,0,0,0.5)"} domain={[0, 100]} />
                 <Tooltip
-                  contentStyle={{ backgroundColor: "rgba(0,0,0,0.8)", border: "1px solid rgba(255,255,255,0.2)" }}
-                  labelStyle={{ color: "#ffffff" }}
+                  contentStyle={{ backgroundColor: theme === "dark" ? "rgba(0,0,0,0.95)" : "rgba(255,255,255,0.95)", border: `1px solid ${theme === "dark" ? "rgba(255,255,255,0.2)" : "rgba(0,0,0,0.2)"}`, color: theme === "dark" ? "#ffffff" : "#000000" }}
+                  labelStyle={{ color: theme === "dark" ? "#ffffff" : "#000000" }}
                 />
-                <Bar dataKey="proficiency" fill="#000000" radius={[8, 8, 0, 0]} />
+                <Bar dataKey="proficiency" fill={theme === "dark" ? "#ffffff" : "#000000"} radius={[8, 8, 0, 0]} />
               </BarChart>
             </ResponsiveContainer>
           </motion.div>
@@ -163,10 +163,10 @@ const Skills = () => {
             <h3 className="text-lg font-bold mb-4 text-black dark:text-white">Skills Overview</h3>
             <ResponsiveContainer width="100%" height={300}>
               <RadarChart data={skillsData}>
-                <PolarGrid stroke="rgba(0,0,0,0.2)" />
-                <PolarAngleAxis dataKey="name" stroke="rgba(255,255,255,0.6)" fontSize={12} />
-                <PolarRadiusAxis angle={90} domain={[0, 100]} stroke="rgba(0,0,0,0.2)" />
-                <Radar name="Proficiency" dataKey="proficiency" stroke="#000000" fill="#000000" fillOpacity={0.5} />
+                <PolarGrid stroke={theme === "dark" ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.1)"} />
+                <PolarAngleAxis dataKey="name" stroke={theme === "dark" ? "rgba(255,255,255,0.5)" : "rgba(0,0,0,0.5)"} fontSize={12} />
+                <PolarRadiusAxis angle={90} domain={[0, 100]} stroke={theme === "dark" ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.1)"} />
+                <Radar name="Proficiency" dataKey="proficiency" stroke={theme === "dark" ? "#ffffff" : "#000000"} fill={theme === "dark" ? "#ffffff" : "#000000"} fillOpacity={0.5} />
               </RadarChart>
             </ResponsiveContainer>
           </motion.div>

@@ -65,19 +65,19 @@ const About = () => {
               About <span className="text-black dark:text-white font-black">Me</span>
             </motion.h2>
 
-            <motion.p className="text-foreground/70 dark:text-foreground/70 text-lg leading-relaxed" variants={itemVariants}>
+            <motion.p className="text-foreground-secondary dark:text-foreground-secondary text-lg leading-relaxed" variants={itemVariants}>
               I'm a passionate MERN stack developer with expertise in building full-stack web applications. From crafting
               intuitive frontends with React to designing robust backend systems with Node.js and Express, I transform
               ideas into scalable digital solutions.
             </motion.p>
 
-            <motion.p className="text-foreground/70 dark:text-foreground/70 text-lg leading-relaxed" variants={itemVariants}>
+            <motion.p className="text-foreground-secondary dark:text-foreground-secondary text-lg leading-relaxed" variants={itemVariants}>
               My journey in web development started with front-end development and evolved into full-stack expertise.
               I've honed my skills in React, Node.js, MongoDB, Express, responsive design, RESTful APIs, and performance
               optimization. I'm passionate about writing clean, maintainable code and building applications that scale.
             </motion.p>
 
-            <motion.p className="text-foreground/70 dark:text-foreground/70 text-lg leading-relaxed" variants={itemVariants}>
+            <motion.p className="text-foreground-secondary dark:text-foreground-secondary text-lg leading-relaxed" variants={itemVariants}>
               When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or
               sharing knowledge with the developer community.
             </motion.p>

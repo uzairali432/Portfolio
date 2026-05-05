@@ -91,7 +91,7 @@ const Contact = () => {
             <h2 className="text-4xl sm:text-5xl font-bold text-balance text-black dark:text-white">
               Let's <span className="text-black dark:text-white font-black">Connect</span>
             </h2>
-            <p className="text-foreground/70 dark:text-foreground/70 text-lg max-w-2xl mx-auto">
+            <p className="text-foreground-secondary dark:text-foreground-secondary text-lg max-w-2xl mx-auto">
               I'm always interested in hearing about new projects and opportunities. Feel free to reach out!
             </p>
           </motion.div>
@@ -101,42 +101,42 @@ const Contact = () => {
             <motion.div variants={itemVariants}>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
-                  <label className="block text-foreground/70 dark:text-foreground/70 font-semibold mb-2 text-sm">Name</label>
+                  <label className="block text-foreground-secondary dark:text-foreground-secondary font-semibold mb-2 text-sm">Name</label>
                   <motion.input
                     type="text"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-white/2 dark:bg-background-secondary border border-foreground/10 dark:border-foreground/10 rounded-lg text-foreground dark:text-foreground focus:outline-none focus:border-black/30 dark:focus:border-white/30 focus:bg-white/4 dark:focus:bg-white/5 transition-all"
+                    className="w-full px-4 py-3 bg-white/2 dark:bg-background-secondary border border-foreground/10 dark:border-foreground/10 rounded-lg text-foreground dark:text-foreground placeholder:text-text-placeholder dark:placeholder:text-text-placeholder focus:outline-none focus:border-black/30 dark:focus:border-white/30 focus:bg-white/4 dark:focus:bg-white/5 transition-all"
                     placeholder="Your name"
                     whileFocus={{ scale: 1.01 }}
                   />
                 </div>
 
                 <div>
-                  <label className="block text-foreground/70 dark:text-foreground/70 font-semibold mb-2 text-sm">Email</label>
+                  <label className="block text-foreground-secondary dark:text-foreground-secondary font-semibold mb-2 text-sm">Email</label>
                   <motion.input
                     type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-white/2 dark:bg-background-secondary border border-foreground/10 dark:border-foreground/10 rounded-lg text-foreground dark:text-foreground focus:outline-none focus:border-black/30 dark:focus:border-white/30 focus:bg-white/4 dark:focus:bg-white/5 transition-all"
+                    className="w-full px-4 py-3 bg-white/2 dark:bg-background-secondary border border-foreground/10 dark:border-foreground/10 rounded-lg text-foreground dark:text-foreground placeholder:text-text-placeholder dark:placeholder:text-text-placeholder focus:outline-none focus:border-black/30 dark:focus:border-white/30 focus:bg-white/4 dark:focus:bg-white/5 transition-all"
                     placeholder="your.email@example.com"
                     whileFocus={{ scale: 1.01 }}
                   />
                 </div>
 
                 <div>
-                  <label className="block text-foreground/70 dark:text-foreground/70 font-semibold mb-2 text-sm">Message</label>
+                  <label className="block text-foreground-secondary dark:text-foreground-secondary font-semibold mb-2 text-sm">Message</label>
                   <motion.textarea
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
                     required
                     rows="5"
-                    className="w-full px-4 py-3 bg-white/2 dark:bg-background-secondary border border-foreground/10 dark:border-foreground/10 rounded-lg text-foreground dark:text-foreground focus:outline-none focus:border-black/30 dark:focus:border-white/30 focus:bg-white/4 dark:focus:bg-white/5 transition-all resize-none"
+                    className="w-full px-4 py-3 bg-white/2 dark:bg-background-secondary border border-foreground/10 dark:border-foreground/10 rounded-lg text-foreground dark:text-foreground placeholder:text-text-placeholder dark:placeholder:text-text-placeholder focus:outline-none focus:border-black/30 dark:focus:border-white/30 focus:bg-white/4 dark:focus:bg-white/5 transition-all resize-none"
                     placeholder="Your message..."
                     whileFocus={{ scale: 1.01 }}
                   />

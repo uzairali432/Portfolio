@@ -90,7 +90,7 @@ const Hero = () => {
         animate="visible"
       >
         <motion.div className="mb-6" variants={itemVariants}>
-          <span className="text-black/70 dark:text-white/70 font-semibold text-sm tracking-widest">WELCOME TO MY PORTFOLIO</span>
+          <span className="text-foreground-secondary dark:text-foreground-secondary font-semibold text-sm tracking-widest">WELCOME TO MY PORTFOLIO</span>
         </motion.div>
 
         <div className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 text-balance">

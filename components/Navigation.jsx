@@ -44,7 +44,7 @@ const Navigation = ({ scrollY }) => {
               <motion.button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-foreground/70 dark:text-foreground/70 hover:text-black dark:hover:text-white font-medium transition-colors"
+                className="text-foreground-secondary dark:text-foreground-secondary hover:text-foreground dark:hover:text-foreground font-medium transition-colors"
                 whileHover={{ color: theme === "light" ? "#000000" : "#ffffff" }}
               >
                 {item.label}
