@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
+import { useTheme } from "./ThemeProvider"
 import {
   BarChart,
   Bar,
@@ -18,6 +19,7 @@ import {
 } from "recharts"
 
 const Skills = () => {
+  const { theme } = useTheme()
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.1,
