@@ -66,7 +66,7 @@ const Projects = () => {
   }
 
   return (
-    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-background dark:bg-background-secondary/30">
+    <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-background dark:bg-background">
       <div className="max-w-7xl mx-auto">
         <motion.h2
           className="text-4xl sm:text-5xl font-bold text-center mb-16 text-black dark:text-white"
@@ -87,12 +87,12 @@ const Projects = () => {
           {projects.map((project) => (
             <motion.div
               key={project.id}
-              className="group bg-white/2 dark:bg-background-secondary border border-foreground/10 dark:border-foreground/10 rounded-2xl overflow-hidden hover:border-black/20 dark:hover:border-white/20 transition-all"
+              className="group bg-background-secondary/50 dark:bg-background-secondary border border-foreground/10 dark:border-foreground/10 rounded-2xl overflow-hidden hover:border-black/20 dark:hover:border-white/20 transition-all"
               variants={cardVariants}
               whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }}
             >
               {/* Image */}
-              <div className="relative overflow-hidden h-48 sm:h-56 bg-foreground/5 dark:bg-foreground/5">
+              <div className="relative overflow-hidden h-48 sm:h-56 bg-foreground/10 dark:bg-foreground/5">
                 <motion.img
                   src={project.image}
                   alt={project.title}

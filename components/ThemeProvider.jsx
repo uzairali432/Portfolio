@@ -9,20 +9,39 @@ export const ThemeProvider = ({ children }) => {
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
+    // Read initial theme from localStorage or system preference
+    const savedTheme = localStorage.getItem("theme")
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches
+    const initialTheme = savedTheme || (prefersDark ? "dark" : "light")
+    
+    setTheme(initialTheme)
     setMounted(true)
-    const savedTheme = localStorage.getItem("theme") || "light"
-    setTheme(savedTheme)
-    document.documentElement.classList.toggle("dark", savedTheme === "dark")
+    
+    // Apply theme to DOM
+    if (initialTheme === "dark") {
+      document.documentElement.classList.add("dark")
+    } else {
+      document.documentElement.classList.remove("dark")
+    }
   }, [])
 
-  const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light"
-    setTheme(newTheme)
-    localStorage.setItem("theme", newTheme)
-    document.documentElement.classList.toggle("dark", newTheme === "dark")
-  }
+  useEffect(() => {
+    // Update DOM whenever theme changes (only on client side after mount)
+    if (!mounted) return
+    
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark")
+    } else {
+      document.documentElement.classList.remove("dark")
+    }
+    
+    // Update localStorage
+    localStorage.setItem("theme", theme)
+  }, [theme, mounted])
 
-  if (!mounted) return children
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === "light" ? "dark" : "light"))
+  }
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>

@@ -117,7 +117,7 @@ const Skills = () => {
   }
 
   return (
-    <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-background">
+    <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-background dark:bg-background">
       <div className="max-w-7xl mx-auto">
         <motion.h2
           className="text-4xl sm:text-5xl font-bold text-center mb-16 text-balance text-black dark:text-white"
@@ -137,7 +137,7 @@ const Skills = () => {
         >
           {/* Bar Chart */}
           <motion.div
-            className="bg-white/2 dark:bg-background-secondary border border-foreground/10 dark:border-foreground/10 rounded-xl p-6"
+            className="bg-background-secondary/50 dark:bg-background-secondary border border-foreground/10 dark:border-foreground/10 rounded-xl p-6"
             whileHover={{ borderColor: "rgba(0, 0, 0, 0.3)" }}
             transition={{ duration: 0.3 }}
           >
@@ -158,7 +158,7 @@ const Skills = () => {
 
           {/* Radar Chart */}
           <motion.div
-            className="bg-white/2 dark:bg-background-secondary border border-foreground/10 dark:border-foreground/10 rounded-xl p-6"
+            className="bg-background-secondary/50 dark:bg-background-secondary border border-foreground/10 dark:border-foreground/10 rounded-xl p-6"
             whileHover={{ borderColor: "rgba(0, 0, 0, 0.3)" }}
             transition={{ duration: 0.3 }}
           >
@@ -183,7 +183,7 @@ const Skills = () => {
           {skillCategories.map((category) => (
             <motion.div
               key={category.category}
-              className="bg-white/2 dark:bg-background-secondary border border-foreground/10 dark:border-foreground/10 rounded-xl p-6 hover:border-black/30 dark:hover:border-white/30 hover:bg-white/4 dark:hover:bg-white/5 transition-all"
+              className="bg-background-secondary/50 dark:bg-background-secondary border border-foreground/10 dark:border-foreground/10 rounded-xl p-6 hover:border-black/30 dark:hover:border-white/30 hover:bg-background-secondary/75 dark:hover:bg-white/5 transition-all"
               variants={itemVariants}
               whileHover={{ y: -8, boxShadow: "0 8px 24px rgba(0,0,0,0.1)" }}
             >
