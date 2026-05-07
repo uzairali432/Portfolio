@@ -17,13 +17,13 @@ const Footer = () => {
         >
           {/* Brand */}
           <div className="space-y-2">
-            <h3 className="text-2xl font-black text-foreground dark:text-foreground">UzairAli</h3>
+            <h3 className="text-2xl font-black text-black dark:text-white">UzairAli</h3>
             <p className="text-foreground-tertiary dark:text-foreground-tertiary text-sm">MERN Stack Developer</p>
           </div>
 
           {/* Quick Links */}
           <div className="space-y-3">
-            <h4 className="text-sm font-bold text-foreground dark:text-foreground uppercase tracking-wider">Quick Links</h4>
+            <h4 className="text-sm font-bold text-black dark:text-white uppercase tracking-wider">Quick Links</h4>
             <div className="space-y-2 text-sm text-foreground-tertiary dark:text-foreground-tertiary">
               <motion.a href="#about" className="block hover:text-foreground dark:hover:text-foreground transition-colors" whileHover={{ x: 5 }}>
                 About
@@ -42,7 +42,7 @@ const Footer = () => {
 
           {/* Contact */}
           <div className="space-y-3">
-            <h4 className="text-sm font-bold text-foreground dark:text-foreground uppercase tracking-wider">Get In Touch</h4>
+            <h4 className="text-sm font-bold text-black dark:text-white uppercase tracking-wider">Get In Touch</h4>
             <a
               href="mailto:ghayasali2424@gmail.com"
               className="text-sm text-foreground dark:text-foreground hover:text-foreground-secondary dark:hover:text-foreground-secondary transition-colors font-semibold"
