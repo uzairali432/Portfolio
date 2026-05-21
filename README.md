@@ -14,7 +14,7 @@ This portfolio showcases my skills, projects, and experience with smooth animati
 - 🧩 Clean and reusable components
 - 🌙 Modern UI with attractive color combinations
 - 🚀 Optimized for performance and accessibility
-
+- 🌑 Dark mode 
 ---
 
 ## 🛠 Tech Stack
