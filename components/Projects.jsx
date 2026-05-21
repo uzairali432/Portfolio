@@ -69,13 +69,13 @@ const Projects = () => {
     <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-background dark:bg-background">
       <div className="max-w-7xl mx-auto">
         <motion.h2
-          className="text-4xl sm:text-5xl font-bold text-center mb-16 text-black dark:text-white"
+          className="text-4xl sm:text-5xl font-bold text-center mb-16 text-foreground"
           ref={ref}
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
         >
-          Featured <span className="text-black dark:text-white font-black">Projects</span>
+          Featured <span className="text-foreground font-black">Projects</span>
         </motion.h2>
 
         <motion.div
@@ -104,7 +104,7 @@ const Projects = () => {
 
               {/* Content */}
               <div className="p-6 space-y-4">
-                <h3 className="text-xl font-bold text-black dark:text-white">{project.title}</h3>
+                <h3 className="text-xl font-bold text-foreground">{project.title}</h3>
                 <p className="text-foreground/70 dark:text-foreground/70 leading-relaxed text-sm">{project.description}</p>
 
                 {/* Tech */}
@@ -112,7 +112,7 @@ const Projects = () => {
                   {project.tech.map((tech) => (
                     <motion.span
                       key={tech}
-                      className="text-xs px-3 py-1.5 bg-black/5 dark:bg-white/5 text-black dark:text-white border border-black/10 dark:border-white/10 rounded-full font-medium"
+                      className="text-xs px-3 py-1.5 bg-foreground/5 text-foreground border border-foreground/10 rounded-full font-medium"
                       whileHover={{ scale: 1.1 }}
                     >
                       {tech}
@@ -125,7 +125,7 @@ const Projects = () => {
                   <motion.a
                     href={project.github}
                     target="_blank"
-                    className="inline-flex items-center gap-2 p-2.5 border-2 border-black rounded-lg hover:bg-black hover:text-white transition-colors"
+                    className="inline-flex items-center gap-2 p-2.5 border-2 border-foreground rounded-lg hover:bg-foreground hover:text-background transition-colors"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                   >

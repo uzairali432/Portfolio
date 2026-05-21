@@ -61,7 +61,7 @@ const About = () => {
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
           >
-            <motion.h2 className="text-4xl sm:text-5xl font-bold text-balance text-black dark:text-white" variants={itemVariants}>
+            <motion.h2 className="text-4xl sm:text-5xl font-bold text-balance text-foreground" variants={itemVariants}>
               About <span className="text-black dark:text-white font-black">Me</span>
             </motion.h2>
 
@@ -85,7 +85,7 @@ const About = () => {
             <motion.div className="pt-4 flex gap-4" variants={itemVariants}>
               <motion.a
                 href="mailto:ghayasali2424@gmail.com"
-                className="px-6 py-2 bg-black text-white rounded-lg hover:bg-black/90 transition-colors font-semibold"
+                className="px-6 py-2 bg-foreground text-background rounded-lg hover:bg-foreground/90 transition-colors font-semibold"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >

@@ -94,29 +94,29 @@ const Hero = () => {
         </motion.div>
 
         <div className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 text-balance">
-          <div className="mb-2 text-black dark:text-white">Hi, I'm</div>
+          <div className="mb-2 text-foreground">Hi, I'm</div>
           <div className="flex flex-wrap justify-center gap-2 sm:gap-3 lg:gap-4">
-            <motion.span variants={nameVariants} className="text-black dark:text-white">
+            <motion.span variants={nameVariants} className="text-foreground">
               Syed
             </motion.span>
-            <motion.span variants={nameVariants} transition={{ delay: 0.3 }} className="text-black dark:text-white">
+            <motion.span variants={nameVariants} transition={{ delay: 0.3 }} className="text-foreground">
               Uzair
             </motion.span>
-            <motion.span variants={nameVariants} transition={{ delay: 0.6 }} className="text-black dark:text-white font-black">
+            <motion.span variants={nameVariants} transition={{ delay: 0.6 }} className="text-foreground font-black">
               Ali
             </motion.span>
           </div>
         </div>
 
         <motion.h2
-          className="text-3xl sm:text-4xl lg:text-5xl font-semibold mb-8 text-black/80 dark:text-white/80"
+          className="text-3xl sm:text-4xl lg:text-5xl font-semibold mb-8 text-foreground/80"
           variants={itemVariants}
         >
           MERN Stack Developer
         </motion.h2>
 
         <motion.p
-          className="text-lg sm:text-xl text-black/60 dark:text-white/60 mb-8 max-w-2xl mx-auto text-balance leading-relaxed"
+          className="text-lg sm:text-xl text-foreground/60 mb-8 max-w-2xl mx-auto text-balance leading-relaxed"
           variants={itemVariants}
         >
           I build full-stack web applications with modern technologies. Specializing in MongoDB, Express, React, and
@@ -125,7 +125,7 @@ const Hero = () => {
 
         <motion.div className="flex flex-col sm:flex-row gap-4 justify-center" variants={itemVariants}>
           <motion.button
-            className="px-8 py-3 bg-black dark:bg-white text-white dark:text-black font-semibold rounded-lg hover:bg-black/85 dark:hover:bg-white/85 transition-colors shadow-lg"
+            className="px-8 py-3 bg-foreground text-background font-semibold rounded-lg hover:bg-foreground/90 transition-colors shadow-lg"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
@@ -133,7 +133,7 @@ const Hero = () => {
             View My Work
           </motion.button>
           <motion.button
-            className="px-8 py-3 border-2 border-black dark:border-white text-black dark:text-white font-semibold rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors bg-white dark:bg-background shadow-lg"
+            className="px-8 py-3 border-2 border-foreground text-foreground font-semibold rounded-lg hover:bg-foreground/5 transition-colors bg-background shadow-lg"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
@@ -148,9 +148,9 @@ const Hero = () => {
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
         >
-          <div className="w-6 h-10 border-2 border-black rounded-full flex items-start justify-center p-2">
+          <div className="w-6 h-10 border-2 border-foreground rounded-full flex items-start justify-center p-2">
             <motion.div
-              className="w-1 h-2 bg-black rounded-full"
+              className="w-1 h-2 bg-foreground rounded-full"
               animate={{ y: [0, 4, 0] }}
               transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
             />
